@@ -5,12 +5,11 @@ package testing
 
 import (
 	"fmt"
-	"net/http"
-	"testing"
-
 	"github.com/gophercloud/gophercloud/starlingx/inventory/v1/system"
 	th "github.com/gophercloud/gophercloud/testhelper"
 	"github.com/gophercloud/gophercloud/testhelper/client"
+	"net/http"
+	"testing"
 )
 
 var (
@@ -31,6 +30,7 @@ var (
 			SharedServices: &sharedServicesString,
 			BMRegion:       "External",
 			VSwitchType:    "none",
+			HTTPSEnabled:   false,
 			RegionConfig:   false,
 		},
 		CreatedAt: "2019-08-07T14:32:41.617713+00:00",
@@ -52,6 +52,7 @@ var (
 			SharedServices: &sharedServicesString,
 			BMRegion:       "External",
 			VSwitchType:    "none",
+			HTTPSEnabled:   true,
 			RegionConfig:   true,
 		},
 		CreatedAt: "2019-08-07T14:32:41.617713+00:00",
@@ -73,6 +74,7 @@ var (
 			// SharedServices: "[]",
 			BMRegion: "Internal",
 			// VSwitchType: "none",
+			HTTPSEnabled: true,
 			RegionConfig: false,
 		},
 		CreatedAt: "2019-08-07T14:45:50.822509+00:00",
